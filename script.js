@@ -55,7 +55,7 @@ async function generateOutput() {
           audio.style.display = "none";
         }
       }
-    }, 500);
+    }, 1000);
   } catch {
     loader.style.display = "block";
     wordOutput.innerText = "";
