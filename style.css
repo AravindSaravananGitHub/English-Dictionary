@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    ;
+}
+
+.container {
+    width: 75%;
+    height: auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.3);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#audioplayer {
+    width: 200px;
+    height: 30px;
+}
+
+.dictionary {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dictionary #title {
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.input-container {
+    width: 300px;
+    height: 30px;
+    display: flex;
+}
+
+.input-container #input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.input-container #btn {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: rgb(204, 203, 203);
+    transition: all 0.5s ease;
+}
+
+.input-container #btn:active {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.input-container #btn:hover {
+    filter: brightness(0.9);
+}
+
+#loader {
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    width: 40px;
+    height: 40px;
+    border-bottom: 2px solid rgb(0, 213, 255);
+    border-left: 3px solid rgb(0, 213, 255);
+    border-radius: 50%;
+    animation: loader .5s ease-in infinite;
+}
+
+@keyframes loader {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.output #word {
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.output #meaning {
+    display: none;
+    margin-bottom: 10px;
+    font-size: 20px;
+    transition: all 0.3s ease-in;
+}
+
+.output #audioplayer {
+    display: none;
+    margin-bottom: 8px;
+    transition: all 0.3s ease-in;
+}
+
+@media (max-width:446px) {
+    .input-container {
+        width: 230px;
+        height: 30px;
+    }
+
+    .container {
+        width: 75%;
+    }
+}
+
+@media (max-width:280px) {
+    .input-container {
+        width: 190px;
+        height: 30px;
+    }
+
+    .container {
+        width: 75%;
+    }
+
+    #audioplayer {
+        width: 150px;
+        height: 20px;
+    }
+}

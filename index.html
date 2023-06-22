@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aravind S">
+    <meta name="description" content="This is Simple English Dictionary">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="icon.png" type="Image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>English Dictionary</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="dictionary">
+            <h2 id="title">English Dictionary</h2>
+            <div class="input-container">
+                <input type="text" placeholder="Enter Your Word" id="input">
+                <button id="btn"><i class="fa fa-search"></i></button>
+            </div>
+            <div id="loader"></div>
+        </div>
+        <div class="output">
+            <p id="word"> Word : "Word"</p>
+            <p id="meaning">Meaning : "Meaning"</p>
+            <audio id="audioplayer" controls>
+                <source src="">
+            </audio>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
